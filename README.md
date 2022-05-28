@@ -1,29 +1,11 @@
 # vue3-route-breadcrumbs
 
-## Project setup
+## Using the Package
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm install --save vue3-route-breadcrumbs
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+The current plugin is in the author's testing phase and cannot be used
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

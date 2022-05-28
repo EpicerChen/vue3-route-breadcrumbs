@@ -19,7 +19,6 @@
     "build-library" : "vue-cli-service build --target lib --name vue3-route-breadcrumbs ./src/install.js"
   },
   "main" : ".dist/vue3-route-breadcrumbs.common.js",
-
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^3.2.13",

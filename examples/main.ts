@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import Vue3RouteBreadcrumbs from './Vue3RouteBreadcrumbs.vue'
+import Vue3RouteBreadcrumbs from '../packages/Vue3RouteBreadcrumbs.vue'
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [

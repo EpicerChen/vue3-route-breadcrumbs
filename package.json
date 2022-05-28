@@ -1,7 +1,8 @@
 {
-  "name": "vue3-route-breadcrumbs",
-  "version": "0.1.0",
+  "name": "vue3-route-breadcrumbs2",
+  "version": "0.1.2",
   "private": false,
+  "description": "breadcrumbs in vue3+vue-router",
   "author": {
     "name": "Epic.C",
     "email": "epicer.chen@gmail.com"
@@ -10,15 +11,17 @@
   "bugs": "https://github.com/EpicerChen/vue3-route-breadcrumbs/issues",
   "keywords": ["breadcrumbs", "TypeScript", "vue3", "vue-router"],
   "license": "MIT",
-  "files": ["dist/*"],
+  "files": ["lib/*"],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit",
-    "build-library" : "vue-cli-service build --target lib --name vue3-route-breadcrumbs ./src/install.js"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "build": "yarn build:clean && yarn build:lib && yarn build:esm-bundle && rimraf lib/demo.html",
+    "build:clean": "rimraf lib",
+    "build:lib": "vue-cli-service build --target lib --name vue3-route-breadcrumbs --dest lib packages/index.ts",
+    "build:esm-bundle": "rollup --config ./build/rollup.config.js"
   },
-  "main" : ".dist/vue3-route-breadcrumbs.common.js",
+  "main" : "lib/vue3-route-breadcrumbs.common.js",
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^3.2.13",

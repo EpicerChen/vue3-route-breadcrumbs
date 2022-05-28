@@ -18,8 +18,8 @@
       "chai"
     ],
     "paths": {
-      "@/*": [
-        "src/*"
+      "~/*": [
+        "packages/*"
       ]
     },
     "lib": [
@@ -30,12 +30,15 @@
     ]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
+    "examples/**/*.ts",
+    "examples/**/*.tsx",
+    "examples/**/*.vue",
+    "packages/**/*.ts",
+    "packages/**/*.tsx",
+    "packages/**/*.vue",
+    "typings/**/*.ts",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
+    "tests/**/*.tsx" ],
   "exclude": [
     "node_modules"
   ]

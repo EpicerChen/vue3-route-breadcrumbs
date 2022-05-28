@@ -1,13 +1,16 @@
 {
   "name": "vue3-route-breadcrumbs",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
+    "build-library" : "vue-cli-service build --target lib --name vue3-route-breadcrumbs ./src/install.js",
     "lint": "vue-cli-service lint"
   },
+  "main" : ".dist/vue3-route-breadcrumbs.common.js",
+  "files": ["dist/*"],
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^3.2.13",

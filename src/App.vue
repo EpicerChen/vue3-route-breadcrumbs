@@ -1,30 +1,17 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <vue3-route-breadcrumbs :route="route" :router="router" :name-dictionary='nameDictionary' />
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script setup lang="ts">
+import { useRoute, useRouter } from 'vue-router';
 
-nav {
-  padding: 30px;
-}
+const router = useRouter()
+const route = useRoute()
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+const nameDictionary = {
+  "/":"home",
+  "a": "第一層",
+  "b": "第二層",
+  "c": "第三層"
 }
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</script>

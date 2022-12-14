@@ -9,10 +9,11 @@
 </template>
 
 <script setup lang="ts">
-import { computed, withDefaults, defineProps } from "vue";
+import { computed, withDefaults } from "vue";
 import { RouteLocationNormalizedLoaded, Router } from "vue-router";
 
 const props = withDefaults(
+    // eslint-disable-next-line no-undef
     defineProps<{
         route: RouteLocationNormalizedLoaded;
         router: Router;
@@ -36,9 +37,10 @@ const nodes = computed(() => {
 })
 
 const map = (
-    items: string[],
-    nameDictionary: { [key: string]: string }) =>
-    items.map((el) =>
+        items: string[],
+        nameDictionary: { [key: string]: string }
+    ) => 
+        items.map((el) =>
         nameDictionary[el] != undefined ? nameDictionary[el] : el)
 
 const goTo = (endIndex: number) => {
